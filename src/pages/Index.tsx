@@ -8,7 +8,6 @@ import { resources, categories, type CategoryId } from "@/data/resources";
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryId | "all">("all");
-  const [searchQuery, setSearchQuery] = useState("");
 
   const counts = useMemo(() => {
     const c: Record<string, number> = {};
