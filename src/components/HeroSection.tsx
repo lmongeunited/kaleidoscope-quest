@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "@/assets/ULA_WH.png";
 
 const HeroSection = () => {
   return (
