@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "@/assets/ULA_WH.png";
 
 const HeroSection = () => {
   return (
@@ -12,6 +13,14 @@ const HeroSection = () => {
         </div>
 
         <div className="container relative z-10 mx-auto max-w-3xl text-center">
+          <motion.img
+            src={logo}
+            alt="UNITE-LA logo"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto mb-6 h-12 sm:h-16 w-auto"
+          />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
