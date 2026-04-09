@@ -24,26 +24,13 @@ const Index = () => {
   }, []);
 
   const filtered = useMemo(() => {
-    let result = resources;
-    if (activeCategory !== "all") {
-      result = result.filter((r) => r.category === activeCategory);
-    }
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      result = result.filter(
-        (r) =>
-          r.name.toLowerCase().includes(q) ||
-          r.description.toLowerCase().includes(q) ||
-          r.phone?.includes(q) ||
-          categoryMap[r.category]?.label.toLowerCase().includes(q)
-      );
-    }
-    return result;
-  }, [activeCategory, searchQuery, categoryMap]);
+    if (activeCategory === "all") return resources;
+    return resources.filter((r) => r.category === activeCategory);
+  }, [activeCategory]);
 
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection searchQuery={searchQuery} onSearchChange={setSearchQuery} />
+      <HeroSection />
 
       <main className="container mx-auto max-w-6xl px-4 py-8 sm:py-12">
         <LayoutGroup>
@@ -58,12 +45,12 @@ const Index = () => {
         <div className="mt-8 sm:mt-10">
           {filtered.length === 0 ? (
             <div className="py-20 text-center">
-              <p className="text-lg text-muted-foreground">No resources found. Try a different search or category.</p>
+              <p className="text-lg text-muted-foreground">No resources found. Try a different category.</p>
             </div>
           ) : (
             <AnimatePresence mode="wait">
               <div
-                key={activeCategory + searchQuery}
+                key={activeCategory}
                 className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
               >
                 {filtered.map((resource, i) => (
