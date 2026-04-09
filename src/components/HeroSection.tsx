@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
-import { Search } from "lucide-react";
 
-interface HeroSectionProps {
-  searchQuery: string;
-  onSearchChange: (value: string) => void;
-}
-
-const HeroSection = ({ searchQuery, onSearchChange }: HeroSectionProps) => {
+const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
       <div className="gradient-hero px-4 pb-16 pt-20 sm:pb-20 sm:pt-28">
@@ -51,18 +45,14 @@ const HeroSection = ({ searchQuery, onSearchChange }: HeroSectionProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mx-auto mt-8 max-w-md"
+            className="mx-auto mt-8 max-w-lg"
           >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-              <input
-                type="text"
-                placeholder="Search resources..."
-                value={searchQuery}
-                onChange={(e) => onSearchChange(e.target.value)}
-                className="w-full rounded-full border-0 bg-white/95 py-3.5 pl-12 pr-4 text-sm text-foreground shadow-lg backdrop-blur-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-white/50"
-              />
-            </div>
+            <p className="text-lg font-semibold text-white sm:text-xl">
+              👇 Tap a category below to get started!
+            </p>
+            <p className="mt-2 text-sm text-white/60">
+              Click any emoji to filter resources by type
+            </p>
           </motion.div>
         </div>
       </div>
