@@ -27,7 +27,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 backdrop-blur-sm">
-              UNITE-LA Resource Guide 2026
+              Resource Guide 2026
             </span>
           </motion.div>
 
