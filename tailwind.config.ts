@@ -64,6 +64,7 @@ export default {
           general: "hsl(var(--cat-general))",
           foster: "hsl(var(--cat-foster))",
           justice: "hsl(var(--cat-justice))",
+          internships: "hsl(var(--cat-internships))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
