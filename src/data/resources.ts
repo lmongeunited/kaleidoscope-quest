@@ -10,7 +10,8 @@ export type CategoryId =
   | "immigration"
   | "general"
   | "foster-care"
-  | "justice";
+  | "justice"
+  | "internships";
 
 export interface Resource {
   name: string;
@@ -43,6 +44,7 @@ export const categories: Category[] = [
   { id: "general", label: "General", emoji: "📋", colorClass: "text-cat-general", bgClass: "bg-cat-general" },
   { id: "foster-care", label: "Foster Care", emoji: "💛", colorClass: "text-cat-foster", bgClass: "bg-cat-foster" },
   { id: "justice", label: "Justice System", emoji: "🔗", colorClass: "text-cat-justice", bgClass: "bg-cat-justice" },
+  { id: "internships", label: "Tech Internships", emoji: "💼", colorClass: "text-cat-internships", bgClass: "bg-cat-internships" },
 ];
 
 export const resources: Resource[] = [
@@ -426,5 +428,83 @@ export const resources: Resource[] = [
     phone: "(323) 860-3799",
     url: "https://community.lalgbtcenter.org/tgi-enby-resource-index/crisis-support/",
     category: "general",
+  },
+  // Tech Internships — free programs + paid corporate opportunities in LA
+  {
+    name: "LA-Tech.org — 1,000 Intern Initiative",
+    description: "Paid tech internships for LA youth from underrepresented communities. No experience required — they place you with top LA tech companies.",
+    url: "https://la-tech.org/",
+    category: "internships",
+    highlight: true,
+  },
+  {
+    name: "LA Tech Rising Internship",
+    description: "Paid internship for ages 18–24 with workshops on technical skills, communication, and self-marketing. Great entry point into LA tech.",
+    url: "https://la-tech.org/la-tech-rising-internship",
+    category: "internships",
+    highlight: true,
+  },
+  {
+    name: "Snap Inc. Internships",
+    description: "Paid summer internships in Santa Monica for software engineering, ML, design, and research. Open to college & PhD students.",
+    url: "https://careers.snap.com/jobs?team=Internships",
+    category: "internships",
+  },
+  {
+    name: "Riot Games Internships",
+    description: "Paid summer internships at LA-based Riot (League of Legends, Valorant, TFT) in engineering, art, design, and game production.",
+    url: "https://www.riotgames.com/en/work-with-us/jobs?craft=Internship",
+    category: "internships",
+  },
+  {
+    name: "SpaceX Internships",
+    description: "Year-round paid internships in Hawthorne, CA for software, hardware, manufacturing and operations. Open to students pursuing a degree.",
+    url: "https://www.spacex.com/careers/students/",
+    category: "internships",
+  },
+  {
+    name: "Google in LA — STEP & Software Engineering Interns",
+    description: "Paid internships at Google's Playa Vista & Venice offices. STEP is for 1st/2nd-year students; SWE intern roles for upper-class & grad students.",
+    url: "https://www.google.com/about/careers/applications/jobs/results/?employment_type=INTERN&location=Los%20Angeles%2C%20CA%2C%20USA",
+    category: "internships",
+  },
+  {
+    name: "Hack the Hood",
+    description: "Free tech bootcamp + paid internships for low-income youth of color (ages 16–25). Build websites for real small businesses.",
+    url: "https://www.hackthehood.org/",
+    category: "internships",
+    highlight: true,
+  },
+  {
+    name: "Code2College",
+    description: "Free program preparing underrepresented high schoolers for paid software engineering internships at top companies before college.",
+    url: "https://www.code2college.org/",
+    category: "internships",
+  },
+  {
+    name: "Genesys Works LA",
+    description: "Paid year-long IT/tech internships for high school seniors from under-resourced communities. Includes training + job placement.",
+    phone: "(213) 631-2700",
+    url: "https://genesysworks.org/los-angeles/",
+    category: "internships",
+    highlight: true,
+  },
+  {
+    name: "Built In LA — Internship Board",
+    description: "Live job board of paid tech internships at LA startups & companies (Snap, GoodRx, ServiceTitan, Headspace, and more).",
+    url: "https://www.builtinla.com/jobs/internships",
+    category: "internships",
+  },
+  {
+    name: "HustLA (LA Mayor's Youth Jobs)",
+    description: "City-funded paid internships for LA youth ages 14–24, including tech & digital media tracks at LA companies and nonprofits.",
+    url: "https://www.lamayor.org/HustLA",
+    category: "internships",
+  },
+  {
+    name: "MLT (Management Leadership for Tomorrow)",
+    description: "Free career coaching + pipeline to paid internships at top tech firms for Black, Latine, and Native American college students.",
+    url: "https://mlt.org/career-prep/",
+    category: "internships",
   },
 ];
